@@ -1,4 +1,4 @@
-export const navitams = [
+export const navItams = [
   {
     name: "Home",
     href: "/",
