@@ -1,4 +1,4 @@
-export const navItams = [
+export const navItems = [
   {
     name: "Home",
     href: "/",
