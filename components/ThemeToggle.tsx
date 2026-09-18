@@ -1,34 +1,52 @@
 "use client"
 
-import {useTheme} from "next-themes"
+import { useTheme } from "next-themes"
 import { Switch } from "@/components/ui/switch"
 import { Moon, Sun } from "lucide-react"
-import {useState} from "react"
-import {useEffect} from "react"
+import { useState, useEffect } from "react"
 
 export default function ThemeToggle() {
-    const {theme, setTheme} = useTheme()
-    const [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
-    useEffect(() => {
-      setMounted(true)
-    },)
+  useEffect(() => {
+    setMounted(true)
+  })
 
-    if (!mounted) {
-      return (
+  if (!mounted) {
+    return (
       <div className="flex items-center space-x-2">
-        <Sun className="h-4 w-4"/>
-        <Switch disabled/>
-        <Moon className="h-4 w-4"/>
+        <Sun className="h-4 w-4" />
+        <Switch disabled />
+        <Moon className="h-4 w-4" />
       </div>
-      )
-    }
+    )
+  }
 
   return (
     <div className="flex items-center space-x-2">
-      <Sun className={`h-4 w-4 transition-colors ${theme === "light" ? "text-yellow-500" : "text-muted-foreground"}`}/>
-      <Switch checked={theme === "dark"} onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")} />
-      <Moon className={`h-4 w-4 transition-colors ${theme === "dark" ? "text-yellow-500" : "text-muted-foreground"}`}/>
+      <Sun
+        className={`h-4 w-4 transition-colors ${
+          resolvedTheme === "light"
+            ? "text-yellow-500"
+            : "text-muted-foreground"
+        }`}
+      />
+
+      <Switch
+        checked={resolvedTheme === "dark"}
+        onCheckedChange={(checked) =>
+          setTheme(checked ? "dark" : "light")
+        }
+      />
+
+      <Moon
+        className={`h-4 w-4 transition-colors ${
+          resolvedTheme === "dark"
+            ? "text-yellow-500"
+            : "text-muted-foreground"
+        }`}
+      />
     </div>
   )
 }
