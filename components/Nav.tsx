@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { navItems } from '../constants/navitems'
 import ThemeToggle from './ThemeToggle'
+import MobileNav from './MobileNav'
 
 function Nav() {
   return (
@@ -20,6 +21,8 @@ function Nav() {
             </Link>
           ))}
            <ThemeToggle />
+            <MobileNav />
+           
         </div>
        
         </div>
