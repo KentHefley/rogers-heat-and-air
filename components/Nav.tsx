@@ -1,10 +1,14 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import { navItems } from '../constants/navitems'
 import ThemeToggle from './ThemeToggle'
 import MobileNav from './MobileNav'
+import { usePathname } from 'next/navigation'
 
 function Nav() {
+  const location = usePathname()
   return (
     <nav className="sticky top-0 bg-background/80 backdrop-blur-md border-b border-border/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +20,7 @@ function Nav() {
         {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((navitem) => (
-            <Link key={navitem.name} href={navitem.href} className="text-muted-foreground text-sm font-medium hover:text-foreground transition-colors duration-200">
+            <Link key={navitem.name} href={navitem.href} className={`text-sm fontmedium transition-colors duration-200 ${location === navitem.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
               {navitem.name}
             </Link>
           ))}
