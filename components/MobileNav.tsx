@@ -25,6 +25,7 @@ import { useEffect } from "react";
 export default function MobileNav() {
     const location = usePathname();
     const [open, setOpen] = useState(false);
+
   useEffect(() => {
     setOpen(false);
   }, [location]);
@@ -46,7 +47,7 @@ export default function MobileNav() {
       <SheetDescription className="flex flex-col mt-5 px-5 space-y-4">
         
             {navItems.map((item) => (
-              <Link href={item.href} key={item.name} className={`text-sm font medium transition-colors duration-200 ${location === item.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+              <Link onClick={() => setOpen(false)} href={item.href} key={item.name} className={`text-sm fontmedium transition-colors duration-200 ${location === item.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
                 {item.name}
               </Link>
             ))}
