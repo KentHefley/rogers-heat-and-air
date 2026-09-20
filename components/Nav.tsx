@@ -21,10 +21,10 @@ function Nav() {
             </Link>
           ))}
            <ThemeToggle />
-            <MobileNav />
-           
         </div>
-       
+       <div className="md:hidden">
+        <MobileNav/>
+       </div>
         </div>
       </div>
 

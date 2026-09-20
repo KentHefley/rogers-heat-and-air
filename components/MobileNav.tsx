@@ -16,33 +16,48 @@ import {Button} from "@/components/ui/button";
 import {navItems} from "../constants/navitems";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
+import { useState } from "react";
+import { useEffect } from "react";
 
 
 
 
 export default function MobileNav() {
     const location = usePathname();
+    const [open, setOpen] = useState(false);
+  useEffect(() => {
+    setOpen(false);
+  }, [location]);
+
+
   return (
-    <Sheet>
-  <SheetTrigger>
-    <Button variant="ghost" className="h-8 w-8">
-        <Menu className="h-4 w-4" />
-    </Button>
-  </SheetTrigger>
+    <Sheet open={open} onOpenChange={state => setOpen(state)}>
+        <SheetTrigger
+          render={
+            <Button variant="ghost" className="h-8 w-8">
+              <Menu size="icon" />
+            </Button>
+          }
+        />
+  
   <SheetContent className="bg-card/40 backdrop-blur-md">
     <SheetHeader>
       <SheetTitle className="text-center">Rogers Heat and Air</SheetTitle>
-      <SheetDescription>
-        <div className="flex flex-col mt-5 px-5 space-y-4">
+      <SheetDescription className="flex flex-col mt-5 px-5 space-y-4">
+        
             {navItems.map((item) => (
-              <Link href={item.href} key={item.name} className={location === item.href ? "text-forground" : "text-muted-foreground text-sm font-medium hover:text-foreground transition-colors duration-200"}>
+              <Link href={item.href} key={item.name} className={`text-sm font medium transition-colors duration-200 ${location === item.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
                 {item.name}
               </Link>
             ))}
-        </div>
+        
       </SheetDescription>
     </SheetHeader>
+     <SheetFooter>
+          <SheetClose render={<Button variant="outline">Close</Button>} />
+        </SheetFooter>
   </SheetContent>
+ 
 </Sheet>
   ) 
 }
