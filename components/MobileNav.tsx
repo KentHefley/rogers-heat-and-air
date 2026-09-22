@@ -41,7 +41,7 @@ export default function MobileNav() {
           }
         />
   
-  <SheetContent className="bg-card/40 backdrop-blur-md">
+  <SheetContent className="bg-card/80 backdrop-blur-md">
     <SheetHeader>
       <SheetTitle className="text-center">Rogers Heat and Air</SheetTitle>
       <SheetDescription className="flex flex-col mt-5 px-5 space-y-4">
