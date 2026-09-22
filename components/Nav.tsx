@@ -14,8 +14,18 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 ">
           {/* Logo */}
-        <div className="shrink-0">
-          <h1 className="text-xl font-serif font-bold text-foreground">Rogers Heat and Air</h1>
+          <div className="shrink-0">
+        <Link
+            href="/"
+            className="inline-flex flex-col font-serif text-foreground"
+          >
+            <span className="text-2xl font-bold leading-none">
+              Rogers
+            </span>
+            <span className="text-lg leading-tight">
+              Heat and Air
+            </span>
+        </Link>
         </div>
         {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
