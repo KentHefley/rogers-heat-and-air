@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="py-12 lg:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border border-border">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 lg:gap-12">
           {/* Left column */}
           <div className="flex flex-col items-start gap-6">

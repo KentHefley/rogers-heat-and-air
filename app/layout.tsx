@@ -22,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
    suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col space-y-2">
         <ThemeProvider
             attribute="class"
             defaultTheme="system"

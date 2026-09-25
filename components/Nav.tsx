@@ -19,10 +19,10 @@ function Nav() {
             href="/"
             className="inline-flex flex-col font-serif text-foreground"
           >
-            <span className="text-2xl font-bold leading-none">
+            <span className="text-3xl font-bold leading-none">
               Rogers
             </span>
-            <span className="text-lg leading-tight">
+            <span className="text-md leading-tight">
               Heat and Air
             </span>
         </Link>
