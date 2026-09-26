@@ -3,7 +3,7 @@ import {Snowflake, Flame, Wrench} from "lucide-react";
 export default function Offerings() {
     return (
         <div className="flex flex-col items-center justify-center gap-4 max-w-7xl mx-auto">
-            <div className="flex flex-col items-center mb-6">
+            <div className="flex flex-col items-center">
                 <p className="text-sm font-medium uppercase text-primary">Our Services</p>
                 <h2 className="text-4xl font-bold font-serif">How can we help you?</h2>
             </div>

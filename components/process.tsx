@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Process() {
   return (
-<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border border-border">
-<div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-16">
+<div className="mx-auto w-full max-w-7xl">
+<div className="grid grid-cols-1 items-center border border-border px-4 py-8 sm:px-6 lg:mt-20 lg:px-8 lg:py-10 gap-10 md:grid-cols-2 lg:gap-16">
 {/* left column */}
 <div className="relative aspect-3/2 overflow-hidden rounded-lg">
             <Image
