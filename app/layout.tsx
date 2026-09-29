@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import {ThemeProvider} from "../components/theme-provider";
+import Footer from "../components/footer";
 import "./globals.css";
 
 import Nav from "../components/Nav";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           >
         <Nav />
         {children}
+        <Footer />
         </ThemeProvider>
       </body>
     </html>

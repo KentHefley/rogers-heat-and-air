@@ -4,12 +4,12 @@ export default function HomeContact() {
   return (
     <section
       aria-labelledby="home-contact-heading"
-      className="mx-auto w-full max-w-7xl bg-slate-900 px-4 py-4 sm:px-6 lg:px-8 lg:py-6"
+      className="mx-auto w-full max-w-7xl bg-input px-4 py-4 sm:px-6 lg:px-8 lg:py-6 -mt-1.5"
     >
       <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
         <h2
           id="home-contact-heading"
-          className="font-serif text-2xl font-bold text-white sm:text-3xl"
+          className="font-serif text-2xl font-bold text-foreground sm:text-3xl"
         >
           Let’s get your home comfortable!
         </h2>

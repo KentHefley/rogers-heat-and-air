@@ -3,6 +3,7 @@ import Header from "../components/header";
 import Offerings from "../components/offerings";
 import Process from "../components/process";
 import HomeContact from "../components/home-contact";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
     <Offerings />
     <Process />
     <HomeContact />
+    
     </>
   );
 }
