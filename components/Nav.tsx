@@ -30,7 +30,7 @@ function Nav() {
         {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((navitem) => (
-            <Link key={navitem.name} href={navitem.href} className={`text-sm fontmedium transition-colors duration-200 ${location === navitem.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+            <Link key={navitem.name} href={navitem.href} className={`text-sm font-medium transition-colors duration-200 ${location === navitem.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
               {navitem.name}
             </Link>
           ))}
